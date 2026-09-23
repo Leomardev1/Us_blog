@@ -1,5 +1,12 @@
 <article class="post-card">
     <div class="post-card__body">
+        {% if post.imagem %}
+        <div class="post-card__image-wrap">
+            <a href="{% url 'PostDetalhes' post.pk %}">
+                <img src="{{ post.imagem.url }}" alt="{{ post.titulo }}" class="post-card__image" style="width:100%;height:auto;display:block;margin-bottom:0.75rem;" />
+            </a>
+        </div>
+        {% endif %}
         <div class="post-card__meta">
             <time class="post-card__date" datetime="{{ post.data_de_criacao|date:'Y-m-d' }}">
                 {{ post.data_de_criacao|date:"d M Y" }}

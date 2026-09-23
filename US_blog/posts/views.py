@@ -57,14 +57,14 @@ def PostDetalhes(request, pk):
 
 class CriarPost(LoginRequiredMixin, CreateView):
     model = Post
-    fields = ['titulo', 'conteudo', 'categoria', 'tags', 'foi_postado']
+    fields = ['titulo', 'imagem', 'conteudo', 'categoria', 'tags', 'foi_postado']
     template_name = 'posts/CriarPost.html'
     success_url = reverse_lazy('home')
 
 
 class AtualizarPost(LoginRequiredMixin, UpdateView):
     model = Post
-    fields = ['titulo', 'conteudo', 'categoria', 'tags', 'foi_postado']
+    fields = ['titulo', 'imagem', 'conteudo', 'categoria', 'tags', 'foi_postado']
     template_name = 'posts/CriarPost.html'
     success_url = reverse_lazy('home')
 

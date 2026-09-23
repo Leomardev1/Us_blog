@@ -14,7 +14,7 @@
             Preencha os campos abaixo para {% if object %}atualizar{% else %}publicar{% endif %} seu artigo.
         </p>
 
-        <form method="post" novalidate>
+        <form method="post" enctype="multipart/form-data" novalidate>
             {% csrf_token %}
 
             {% for field in form %}

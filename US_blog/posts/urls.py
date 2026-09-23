@@ -9,5 +9,5 @@ urlpatterns = [
     path("criar/", CriarPost.as_view(), name='CriarPost'),
     path('atualizar/<int:pk>/', AtualizarPost.as_view(), name='AtualizarPost'),
     path('deletar/<int:pk>/', DeletarPost.as_view(), name='DeletarPost'),
-    path('portfolio/', views.portfolio, name='portfolio'),
+    # path('portfolio/', views.portfolio, name='portfolio'),
 ]

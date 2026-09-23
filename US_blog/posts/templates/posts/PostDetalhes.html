@@ -36,6 +36,12 @@
                 {% endif %}
             </header>
 
+            {% if post.imagem %}
+            <figure class="article__figure" style="margin:1rem 0;">
+                <img src="{{ post.imagem.url }}" alt="{{ post.titulo }}" style="max-width:100%;height:auto;" />
+            </figure>
+            {% endif %}
+
             <div class="article__body">
                 {% for paragraph in post.conteudo.splitlines %}
                     {% if paragraph.strip %}

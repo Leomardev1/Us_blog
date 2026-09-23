@@ -41,6 +41,7 @@ class Post(models.Model):
     data_de_criacao = models.DateField(auto_now_add=True)
     foi_postado = models.BooleanField(default=True)
     slug = models.SlugField(max_length=200, unique=True, blank=True)
+    imagem = models.ImageField(upload_to='posts/', blank=True, null=True)
     categoria = models.ForeignKey(
         Category,
         on_delete=models.SET_NULL,
